@@ -1,0 +1,378 @@
+/* Fundo preto com textura granulada/pontilhada */
+body {
+    background-color: #080808;
+    background-image: radial-gradient(circle, #1c1c1c 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Barra de cabeçalho fixa no topo */
+.cabecalho {
+    background-color: #111111;
+    padding: 15px 30px;
+    border-bottom: 1px solid #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #aaaaaa;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+/* Seção Hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    text-align: left;
+    border-bottom: 1px solid #222222;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.hero-conteudo {
+    max-width: 480px;
+}
+
+.hero h1 {
+    font-size: 60px; 
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    color: #b0b0b0;
+    font-size: 18px; 
+    line-height: 1.7;
+}
+
+.hero-computador {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+}
+
+/* Caixa do editor de código */
+.mockup-laptop {
+    background-color: #121212;
+    border: 1px solid #333333;
+    width: 460px;
+    height: 290px;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+    font-family: monospace;
+    font-size: 13px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.tela-codigo {
+    color: #ffffff;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.kw { color: #ff3333; }
+.func { color: #00f0ff; }
+.com { color: #888888; }
+.str { color: #ffffff; }
+
+.cursor {
+    color: #00f0ff;
+    font-weight: bold;
+    animation: piscar 0.7s infinite;
+    display: inline-block;
+    margin-left: 2px;
+}
+
+@keyframes piscar {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+h2 {
+    color: #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.bloco {
+    padding: 60px 20px;
+}
+
+/* --- ESTILO DOS CARDS DE LINGUAGENS E FERRAMENTAS --- */
+.langs-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.lang-card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #111111;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.lang-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.lang-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 8, 8, 0.94);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.lang-card:hover .lang-overlay {
+    opacity: 1;
+}
+
+.lang-nome {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.lang-nivel {
+    color: #888888;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* --- ESTILO DOS CARDS DE PROJETOS (3 POR LINHA & TRANSPARENTE ESCURO) --- */
+.projetos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.projeto-card {
+    position: relative;
+    width: 360px;
+    height: 220px;
+    background-color: #111111;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.projeto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Barra inferior com fundo preto translúcido e efeito vidro */
+.projeto-barra {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 15, 15, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+/* Camada de Fade em fundo translúcido escuro ao passar o mouse */
+.projeto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.88);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.projeto-card:hover .projeto-overlay {
+    opacity: 1;
+}
+
+.projeto-card:hover .projeto-barra {
+    opacity: 0;
+}
+
+.projeto-overlay h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.projeto-overlay p {
+    color: #cccccc;
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.btn-projeto {
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-projeto:hover {
+    background-color: #cccccc;
+}
+
+/* Contato e Rodapé */
+button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #cccccc;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #111111;
+    border-top: 1px solid #333333;
+    color: #777777;
+}
+
+/* --- RESPONSIVIDADE PARA TABLETS E TELEMÓVEIS --- */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-conteudo {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .mockup-laptop {
+        width: 100%;
+        max-width: 420px;
+        height: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu a {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .projeto-card {
+        width: 100%;
+        max-width: 350px;
+        height: 210px;
+    }
+
+    .lang-card {
+        width: 85px;
+        height: 85px;
+    }
+
+    .lang-img {
+        width: 40px;
+        height: 40px;
+    }
+}
