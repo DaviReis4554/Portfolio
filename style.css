@@ -190,7 +190,7 @@ h2 {
     text-align: center;
 }
 
-/* --- ESTILO DOS CARDS DE PROJETOS (3 POR LINHA & TRANSPARENTE ESCURO) --- */
+/* --- ESTILO DOS CARDS DE PROJETOS --- */
 .projetos-grid {
     display: flex;
     justify-content: center;
@@ -218,7 +218,6 @@ h2 {
     display: block;
 }
 
-/* Barra inferior com fundo preto translúcido e efeito vidro */
 .projeto-barra {
     position: absolute;
     bottom: 0;
@@ -235,7 +234,6 @@ h2 {
     text-align: center;
 }
 
-/* Camada de Fade em fundo translúcido escuro ao passar o mouse */
 .projeto-overlay {
     position: absolute;
     top: 0;
@@ -292,29 +290,152 @@ h2 {
     background-color: #cccccc;
 }
 
-/* Contato e Rodapé */
-button {
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
+/* --- ESTILOS DO TEXTO E DOS BOTÕES EXTERNOS --- */
+.projetos-footer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.texto-portfolio {
+    color: #aaaaaa;
+    font-size: 15px;
+    max-width: 650px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+.botoes-externos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 10px;
 }
 
-button:hover {
-    background-color: #cccccc;
+.btn-externo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: #121212;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    min-width: 170px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
+.btn-externo:hover {
+    background-color: #1a1a1a;
+    border-color: #555555;
+    transform: translateY(-2px);
+}
+
+.btn-icone {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* --- ESTILO DA SEÇÃO DE CURRÍCULO --- */
+.curriculo-bloco {
+    background-color: #0c0c0c;
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+}
+
+.btn-curriculo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-curriculo:hover {
+    background-color: #cccccc;
+    transform: translateY(-2px);
+}
+
+/* --- ESTILO DA SEÇÃO DE CONTATO --- */
+.contato-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.contato-card {
+    background-color: #121212;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 18px 22px;
+    width: 320px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    box-sizing: border-box;
+}
+
+.contato-card:hover {
+    background-color: #1a1a1a;
+    border-color: #555555;
+    transform: translateY(-3px);
+}
+
+.contato-info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    text-align: left;
+}
+
+.contato-label {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.contato-sub {
+    color: #888888;
+    font-size: 12px;
+}
+
+.contato-icone {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Rodapé */
 footer {
-    margin-top: 40px;
-    padding: 15px;
+    margin-top: 60px;
+    padding: 20px;
     background-color: #111111;
     border-top: 1px solid #333333;
     color: #777777;
+    font-size: 14px;
 }
 
 /* --- RESPONSIVIDADE PARA TABLETS E TELEMÓVEIS --- */
@@ -374,5 +495,10 @@ footer {
     .lang-img {
         width: 40px;
         height: 40px;
+    }
+
+    .contato-card {
+        width: 100%;
+        max-width: 350px;
     }
 }
