@@ -149,10 +149,13 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
+/* TRAVA DE SEGURANÇA: Impede que os ícones das linguagens estourem o layout */
 .lang-img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+    width: 50px !important;
+    height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+    object-fit: contain !important;
 }
 
 .lang-overlay {
@@ -190,7 +193,7 @@ h2 {
     text-align: center;
 }
 
-/* --- ESTILO DOS CARDS DE PROJETOS --- */
+/* --- ESTILO DOS CARDS DE PROJETOS (3 POR LINHA & TRANSPARENTE ESCURO) --- */
 .projetos-grid {
     display: flex;
     justify-content: center;
@@ -211,13 +214,17 @@ h2 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
+/* TRAVA DE SEGURANÇA: Garante que os banners dos jogos fiquem contidos no card */
 .projeto-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
     display: block;
 }
 
+/* Barra inferior com fundo preto translúcido e efeito vidro */
 .projeto-barra {
     position: absolute;
     bottom: 0;
@@ -234,6 +241,7 @@ h2 {
     text-align: center;
 }
 
+/* Camada de Fade em fundo translúcido escuro ao passar o mouse */
 .projeto-overlay {
     position: absolute;
     top: 0;
@@ -341,6 +349,8 @@ h2 {
 .btn-icone {
     width: 22px;
     height: 22px;
+    max-width: 22px;
+    max-height: 22px;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -424,6 +434,8 @@ h2 {
 .contato-icone {
     width: 24px;
     height: 24px;
+    max-width: 24px;
+    max-height: 24px;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -493,8 +505,10 @@ footer {
     }
 
     .lang-img {
-        width: 40px;
-        height: 40px;
+        width: 40px !important;
+        height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
     }
 
     .contato-card {
